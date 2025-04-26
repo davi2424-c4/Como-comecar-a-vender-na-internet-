@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milionário Anônimo</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', Arial, sans-serif;
+            background: linear-gradient(135deg, #0a0a0a, #1c1c1c);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+            overflow-x: hidden;
+            height: 100vh;
+            position: relative;
+        }
+        h1 {
+            font-size: 36px;
+            color: #00ff7f;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 28px;
+            color: #ffffff;
+            margin: 20px 0 10px;
+        }
+        p {
+            font-size: 20px;
+            color: #cccccc;
+            margin: 10px 0;
+            line-height: 1.5;
+        }
+        .preco {
+            font-size: 28px;
+            font-weight: bold;
+            color: #00ff7f;
+            margin: 30px 0;
+        }
+        .botao-comprar {
+            background-color: #00ff7f;
+            color: #000;
+            padding: 15px 40px;
+            font-size: 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.3s, transform 0.3s;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        .botao-comprar:hover {
+            background-color: #00cc66;
+            transform: scale(1.05);
+        }
+        .frase-destaque {
+            font-size: 24px;
+            font-weight: bold;
+            background: linear-gradient(90deg, #00ff7f, #00cc66);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 30px 0;
+        }
+        .emoji {
+            position: absolute;
+            font-size: 30px;
+            pointer-events: none;
+            animation: float 2s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body>
+
+<h1>Milionário Anônimo</h1>
+
+<div class="frase-destaque">Aprenda a Transformar seu Celular em uma Máquina de Vendas!</div>
+
+<h2>Guia para Iniciantes</h2>
+<p>Descubra o passo a passo para começar a vender na internet de forma simples e prática.</p>
+<p>Mesmo sem experiência anterior, você pode conquistar sua liberdade financeira!</p>
+
+<div class="preco">Por apenas R$30,00</div>
+
+<a class="botao-comprar" href="https://pay.kirvano.com/0d6e85ce-5d35-4898-8565-0df5d61261c8" target="_blank">
+    Comprar Agora
+</a>
+
+<script>
+    document.addEventListener('mousemove', function(e) {
+        const emoji = document.createElement('div');
+        emoji.classList.add('emoji');
+        emoji.style.left = e.pageX + 'px';
+        emoji.style.top = e.pageY + 'px';
+        emoji.innerText = '💸';
+        document.body.appendChild(emoji);
+
+        setTimeout(() => {
+            emoji.remove();
+        }, 2000); // o emoji desaparece depois de 2 segundos
+    });
+</script>
+
+</body>
+</html>
